@@ -1,0 +1,2 @@
+var NOTOFICATION_DELAY=3e3,refs={notification:document.querySelector(".js-alert")},timeoutId=null;function onNotificationClick(){hidenNotification(),clearTimeout(timeoutId)}function showNotificaions(){refs.notification.classList.add("is-visible"),timeoutId=setTimeout((function(){hidenNotification(),console.log("закрыли алерт автоматически")}),NOTOFICATION_DELAY)}function hidenNotification(){refs.notification.classList.remove("is-visible")}refs.notification.addEventListener("click",onNotificationClick),showNotificaions();
+//# sourceMappingURL=notifications.fae09370.js.map
