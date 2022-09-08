@@ -17,11 +17,23 @@
   <body>
     <p><a href="/src/index.html">На главную</a></p>
 
-    <div class="modal" tabindex="-1">
+    <!-- provide a trigger button -->
+    <button data-bs-toggle="modal" data-bs-target="#myModal" type="button">
+      Launch modal
+    </button>
+
+    <!-- also the modal itself -->
+    <div
+      id="myModal"
+      class="modal fade"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title" id="myModalLabel">Подпишись на рассылку</h5>
             <button
               type="button"
               class="btn-close"
@@ -30,7 +42,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            Подпишитесь на нас, чтобы первыми узнавать о новинках и акциях
+            нашего магазина
           </div>
           <div class="modal-footer">
             <button
@@ -38,9 +51,11 @@
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              Отменить
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-success" data-subscribe>
+              Подписаться
+            </button>
           </div>
         </div>
       </div>
